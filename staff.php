@@ -146,9 +146,7 @@ if (isset($_SESSION['password']) && isset($_SESSION['email'])) {
 <script>
   var exampleModal = document.getElementById('exampleModal')
           exampleModal.addEventListener('show.bs.modal', function (event) {
-          // Button that triggered the modal
           var button = event.relatedTarget
-          // Extract info from data-bs-* attributes
           var name = button.getAttribute('data-bs-name')
           var marks = button.getAttribute('data-bs-marks')
           var rollno = button.getAttribute('data-bs-rollno')
@@ -158,9 +156,7 @@ if (isset($_SESSION['password']) && isset($_SESSION['email'])) {
           var modalBodyInput2 = exampleModal.querySelector('.modal-body input#marks')
           var modalBodyInput3 = exampleModal.querySelector('.modal-body input#rollno')
 
-          modalTitle.textContent = 'Student Roll no ' + rollno
-          //   modalBodyInput1.value = name
-          //   modalBodyInput2.value = marks
+          modalTitle.textContent = 'Roll no ' + rollno
                modalBodyInput3.value = rollno
 
           })    
@@ -195,14 +191,7 @@ while($row = mysqli_fetch_array($result))
   echo "<td>" . $row['Fname'] . " " . $row['Lname'] . "</td>";
   echo "<td>" . $row['Roll_no'] . "</td>";
   echo "<td>" . $row['Obtained_marks'] . "</td>";
-  // echo "<td>"."<i class='fas fa-trash-alt' style='font-size:36px'>"."</i>"."</td>";
-  // echo "<td>"."<button class='btn'>"."<i class='fa fa-home'>"."</i>"."</button>"."</td>";
-  //  echo "<td>"."<button class='btn' data-bs-toggle='modal' data-bs-target='#exampleModal'>".'Edit'."</button>    "."   <button class='btn' id='del'>".'Delete'."</button>"."</td>";
-  // echo "<td>". "<input type='submit' name='button1' value='Button1'/>"."</td>";
-//   echo "<td>"."<button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-rollno='$rollndata-bs-name='$name'o' data-bs-marks='$marks' >"
-//   .'Edit'.
-// "</button>"."</td>";
-echo "<td>"."<button type='button' class='btn' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-name='$name' data-bs-rollno='$rollno' data-bs-marks='$marks' style='background-color:green;' >"
+  echo "<td>"."<button type='button' class='btn' data-bs-toggle='modal' data-bs-target='#exampleModal' data-bs-name='$name' data-bs-rollno='$rollno' data-bs-marks='$marks' style='background-color:green;' >"
           .'Edit'.
         "</button>"."</td>";
   echo "</tr>";
@@ -215,7 +204,6 @@ echo "</table>";
 <br><br>
 
 <a href= 'new.php' class="btn btn-info d-grid gap-2 col-2 mx-auto" id="button">Add new records</a> 
-<!-- <a href="new.php" class="btn btn-info d-grid gap-2 col-1 mx-auto" role="button">Logout</a> -->
 </body>
 </html>
 <?php 

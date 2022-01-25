@@ -16,10 +16,6 @@ echo $x;
             $sql1="INSERT into marks (Obtained_marks,Roll_no,sub_id) values ('$marks','$Roll_no','$x')";
             if(mysqli_query($conn,$sql)){
                 if(mysqli_query($conn,$sql1)){
-                
-                // echo "<h3>data stored in a database successfully." 
-                //     . " Please browse your localhost php my admin" 
-                //     . " to view the updated data</h3>"; 
                 header("Location: staff.php");
                 }
             } else{

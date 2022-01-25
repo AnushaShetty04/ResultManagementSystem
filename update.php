@@ -12,9 +12,6 @@ include "dbConn.php";
         else{
             $sql = "UPDATE marks SET Obtained_marks=$marks WHERE Roll_no=$rollno and sub_id=$sub_id";
             if(mysqli_query($conn,$sql)){
-                // echo "<h3>data stored in a database successfully." 
-                //     . " Please browse your localhost php my admin" 
-                //     . " to view the updated data</h3>"; 
                 header("Location: staff.php");
       
             } else{
